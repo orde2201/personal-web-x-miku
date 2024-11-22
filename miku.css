@@ -1,0 +1,243 @@
+/*base style*/
+body{
+    overflow: hidden;
+    background: linear-gradient(to bottom,#e9f54d 70%,#ffb0bf) ;
+    height: 100%;
+    width: 100%;
+    background-position: 0 100vh;
+}
+.up_menu{
+    width: 45vw;
+    height: 8vh;
+    position: relative;
+    right: 1vw;
+    bottom: 2vh;
+    background-color: #16b0b7;
+}
+.menu{
+    transform: scale(130vh);
+    background-color: #16b0b7;
+    border-radius:3vh;
+    width: 70vh;
+    position:relative;
+    left: 10vw;
+    top: 15vh;
+    z-index: 1;
+    border: solid 4vh;
+    color: #16b0b7;
+    
+}
+h1{
+    color: #16b0b7;
+    transform: scale(320%);
+    position: relative;
+    left: 125vw;
+    top: 7vh;
+    font-family: "Orbitron",sans-serif;
+}
+h3{
+    background-color: #e9f54d;
+    transform: scale(250%);
+    border-radius: 0.4vw;
+    margin: 6vh;
+    text-align: center;
+    margin-left: 11.5vw;
+    margin-right: 11.5vw;
+    font-family: "Orbitron",sans-serif;
+    padding-bottom: 0vh;
+    
+}
+.link1{
+    text-decoration: none;
+    color: #16b0b7;
+    transition: font-size 0.3s ease;
+    
+}
+.link1:hover{
+    font-size: 2vh;
+}
+.miku{
+    position: relative;
+    left: 46vw;
+    bottom: 70vh;
+    z-index: 2;
+    height: 150vh;
+    width: 150vh;
+}
+.back_miku{
+    z-index: 1;
+    background-color: #16b0b7;
+    height: 140vh;
+    width: 100vw;
+    position: relative;
+    bottom: 220vh;
+    left: 60vw;
+    transform: rotate(20deg);
+}
+
+/*effect*/
+@keyframes slideleft{
+    0%{
+        transform: translateX(10%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.miku{
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideleft 0.5s ease-out forwards;
+}
+@keyframes antirotate{
+    0%{
+        transform: rotate(30deg);
+        opacity: 0;
+    }
+    100%{
+        transform: rotate(110deg);
+        opacity: 1;
+    }
+}
+.back_miku{
+    opacity: 0;
+    transform: rotate(100%);
+    animation: antirotate 0.5s ease-out forwards;
+}
+
+@keyframes up_bar{
+    0%{
+        transform: translateX(-30%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.up_menu{
+    opacity: 0;
+    transform: translateX(0);
+    animation: up_bar 0.5s ease-out forwards;
+}
+
+.intro{
+    opacity: 0;
+    transform: translateX(100);
+    animation: up_bar 0.5s ease-out forwards;
+}
+@keyframes menuff{
+    0%{
+        transform: translateY(30%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+.menu{
+    opacity: 1;
+    transform: translateY(0);
+    animation: menuff 0.5s ease-out forwards;
+}
+
+/*flexibility display*/
+@media(max-width: 450px) {
+    .up_menu{
+        width: 50vw;
+        height: 4vh;
+        position: relative;
+        right: 2vw;
+        bottom: 1vh;
+        background-color: #16b0b7;
+    }
+    .miku{
+        position: relative;
+        height: 40vh;
+        width: 40vh;
+        bottom: 60vh;
+        left: 50vw;
+    }
+    h1{
+        transform: scale(120%);
+        position: relative;
+        left: 15vw;
+        top: 7vh;
+    }
+    .back_miku{
+        height: 120vh;
+        width: 120vw;
+        position: relative;
+        bottom: 130vh;
+        left: 147vw;
+        transform: rotate(100deg);
+    }
+    .menu{
+        background-color: #16b0b7;
+        border-radius:2vh;
+        width: 77vw;
+        height: 40vh;
+        position:relative;
+        left: 1vw;
+        top: 30vh;
+        z-index: 1;
+        border: solid 4vh;
+        color: #16b0b7;
+    }
+    h3{
+        background-color: #e9f54d;
+        transform: scale(120%);
+        border-radius: 1.5vw;
+        margin: 2.8vh;
+        text-align: center;
+        margin-left: 0.5vw;
+        margin-right: 0.5vw;
+        font-family: "Orbitron",sans-serif;
+        padding-bottom: 1vh;
+        padding-top: 1vh;
+    }
+}
+
+@media(max-width: 915px) and (orientation: landscape){
+    h1{
+        transform: scale(150%);
+        position: relative;
+        left: 36vw;
+        top: 2vh;
+    }
+    h3{
+        transform: scale(100%);
+        border-radius: 0.4vw;
+        margin: 3vh;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        padding-bottom: 0vh;
+        
+    }
+    .menu{
+        border-radius:3vh;
+        width: 70vh;
+        position:relative;
+        left: 10vw;
+        top: 5vh;
+        
+    }
+    .back_miku{
+        position: relative;
+        bottom: 220vh;
+        left: 34vw;
+    }
+    .miku{
+        position: relative;
+        left: 40vw;
+        bottom: 80vh;
+    }
+    .up_menu{
+        width: 30vw;
+        height: 8vh;
+    }
+}
