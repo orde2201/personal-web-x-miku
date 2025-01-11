@@ -1,11 +1,10 @@
 /*base style*/
 body{
-    overflow: hidden;
-    background: linear-gradient(to bottom,#e9f54d 70%,#ffb0bf) ;
+    
+    background-color: rgb(255, 255, 255) ;
     height: 100%;
     width: 100%;
     background-position: 0 100vh;
-    
     max-width: 100%;
     max-height: 100%;
 }
@@ -15,47 +14,89 @@ body{
     position: relative;
     right: 1vw;
     bottom: 2vh;
-    background-color: #16b0b7;
+    background-color: rgb(50, 235, 235);
+    border: solid 0.8px black;
+    z-index: 1;
+}
+button{
+    
+    margin-left: 3vw;
+    margin-right: 3vw;
+    width: 2vw;
+    height: 5vw;
+    background-color: rgb(255, 238, 0);
+    size: 40vw;
+    color: #ffb0bf;
+    z-index: 1;
+    position: relative;
+    bottom: 8.5vh;
+    
+}
+.luka{
+    background-color: rgb(255, 219, 225);
+}
+.rin{
+    background-color: rgb(255, 253, 133);
+}
+.mikuu{
+    background-color: rgb(200, 255, 255);
+}
+.meiko{
+    background-color: rgb(252, 144, 162);
+}
+.kaito{
+    background-color: rgb(179, 205, 255);
 }
 .menu{
     display: flex;
     flex-direction: column;
     transform: scale(130vh);
-    background-color: #16b0b7;
+    background-color: rgb(50, 235, 235);
     border-radius:3vh;
     width: 70vh;
     position:relative;
     left: 10vw;
-    top: 15vh;
-    z-index: 1;
+    bottom: 13vh;
+    z-index: 6;
     border: solid 4vh;
-    color: #16b0b7;
-    
+    color: rgb(50, 235, 235);
+    border: solid 0.7px black;
 }
 h1{
-    color: #16b0b7;
-    transform: scale(320%);
+    color: rgb(255, 255, 255);
+    transform: scale(100%);
+    font-size: 13vh;
     position: relative;
-    left: 125vw;
-    top: 7vh;
     font-family: "Orbitron",sans-serif;
-
+    padding-left: 120px;
+    background-color: rgb(50, 235, 235);
+    border: solid 0.01px black;
+    z-index: 2;
+    
+    
+}
+.intro{
+    position: relative;
+    z-index: 2;
+    right: 118.5vw;
+    bottom: 11vh;
 }
 h3{
-    background-color: #e9f54d;
-    transform: scale(250%);
+    background-color:rgb(255, 255, 255);
+    transform: scale(150%);
     border-radius: 0.4vw;
-    margin: 3vh;
+    margin: 4vh;
     text-align: center;
     margin-left: 11.5vw;
     margin-right: 11.5vw;
     font-family: "Orbitron",sans-serif;
     padding-bottom: 0vh;
+    border: solid 0.05px black;
     
 }
 .link1{
     text-decoration: none;
-    color: #16b0b7;
+    color: rgb(50, 235, 235);
     transition: font-size 0.3s ease;
     
 }
@@ -65,22 +106,31 @@ h3{
 .miku{
     position: relative;
     left: 46vw;
-    bottom: 64vh;
-    z-index: 2;
-    height: 150vh;
-    width: 150vh;
+    bottom: 70vw;
+    z-index: 4;
+    height: 60%;
+    width: 60%;
 }
 .back_miku{
-    z-index: 1;
-    background-color: #16b0b7;
+    z-index: 3;
+    background-color: rgb(50, 235, 235);
     height: 140vh;
     width: 100vw;
     position: relative;
-    bottom: 220vh;
-    left: 60vw;
+    bottom: 250vh;
+    left: 55vw;
     transform: rotate(20deg);
+    border: solid 0.7px black;
 }
-
+.background{
+    z-index: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    bottom: 150vw;
+    right: 10px;
+    opacity: 0.3;
+}
 /*effect*/
 @keyframes slideleft{
     0%{
@@ -124,6 +174,11 @@ h3{
         opacity: 1;
     }
 }
+button{
+    opacity: 0;
+    transform: translateX(0);
+    animation: up_bar 0.5s ease-out forwards;
+}
 .up_menu{
     opacity: 0;
     transform: translateX(0);
@@ -154,8 +209,38 @@ h3{
 /*flexibility display*/
 @media(max-width:1280px){
     h1{
+        position: relative;
         left: 117vw;
     }
+    .miku{
+        position: relative;
+        bottom: 55vw;
+    }
+    h3{
+        font-size: 130%;
+        margin: 3vh;
+        margin-left: 7.3vw;
+        margin-right: 7.3vw;
+    }
+    .link1{
+        text-decoration: none;
+        color: rgb(50, 235, 235);
+        transition: font-size 0.3s ease;
+        
+    }
+    .link1:hover{
+        font-size: 3vh;
+    }
+    .back_miku{
+        z-index: 3;
+        background-color: rgb(50, 235, 235);
+        height: 140vh;
+        width: 100vw;
+        position: relative;
+        bottom: 2800px;
+        left: 750px;
+        transform: rotate(20deg);
+        border: solid 0.7px black;}
 }
 @media(max-width: 450px) {
     .up_menu{
