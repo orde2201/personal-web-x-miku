@@ -1,8 +1,8 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"c>
     <title>Document</title>
     <link rel="stylesheet" href="miku.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,22 +10,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet"> 
     
 </head>
-<body>
+<body id="body">
     <!--up menu-->
-    <div class="up_menu"></div>
-    <div class="intro"><h1>WELCOME</h1></div>
+    <div class="up_menu" id="col"></div>
+    <div class="icon">
+        <button type="button" class="mikuu" id="mikuuu"></button>
+        <button type="button" class="luka" id="lukaa"></button>
+        <button type="button" class="rin" id="rin"></button>
+        <button type="button" class="kaito" id="kaito"></button>
+        <button type="button" class="meiko" id="meiko"></button>
+    </div>
+    <div class="intro"><h1 id="txt_col">WELCOME</h1></div>
     <!--welcome menu-->
-    <div class="menu">
-        <a href="menu/web_project.html" class="link1"><h3>Web Project</h3></a>
-        <a href="menu/gfx_project.html" class="link1"><h3>GFX Project</h3></a>
-        <a href="menu/favorite_song.html" class="link1"><h3>favorite Song</h3></a>
-        <a href="menu/social_media.html" class="link1"><h3>Social Media</h3></a>
-        <a href="menu/contact.html" class="link1"><h3>contact me</h3></a>
+    <div class="menu" id="col_menu">
+        <a href="menu/web_project.html" class="link1"><h3 class="option">Web Project</h3></a>
+        <a href="menu/gfx_project.html" class="link1"><h3 class="option">GFX Project</h3></a>
+        <a href="menu/favorite_song.html" class="link1"><h3 class="option">favorite Song</h3></a>
+        <a href="menu/social_media.html" class="link1"><h3 class="option">Social Media</h3></a>
+        <a href="menu/contact.html" class="link1"><h3 class="option">contact me</h3></a>
     </div>
     <!--hatsune miku image-->
-    <img src="assets/main-miku.png" alt="miku" class="miku">
-
+    <img src="assets/miku.png" alt="miku" class="miku" id="imgee">
+    <img src="assets/background_miku.jpg" alt="back" class="background" id="backk">    
     <!--miku back-->
-    <div class="back_miku"></div>
+    <div class="back_miku" id="back_m"></div>
+    <script src="mode/luka.js"></script>
+    <script src="mode/miku.js"></script>
+    <script src="mode/len_rin.js"></script>
+    
 </body>
 </html>
